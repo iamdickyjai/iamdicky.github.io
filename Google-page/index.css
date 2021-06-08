@@ -1,0 +1,63 @@
+nav{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* navigation bar */
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 4px;
+}
+
+nav li{
+    float: left;
+    margin: 2px;
+}
+
+nav a, nav button{
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #313131;
+}
+
+nav img{
+    width:100%;
+    height:auto;
+}
+
+nav button{
+    width: 100px;
+    color: white;
+    background-color:rgb(52, 110, 235);
+    border: none;
+    border-radius: 5px;
+}
+/*end*/
+
+main{
+    /*
+    position: absolute;
+    top:30%;
+    width:100%;
+    text-align: center;
+    */
+    margin: auto;
+    margin-top: 30%;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+}
+
+/*sub element of main*/
+main input{
+    width: 100%;
+}
+
+main form{
+    padding: 20px;
+    padding-bottom: 0px;
+}
