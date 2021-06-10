@@ -6,40 +6,52 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li class="f"><a href="https://mail.google.com">Gmail</a></li>
-            <li class="f"><a href="">Images</a></li>
-            <li class="f"><a href="https://www.google.com.hk"><img src="img/svg-path.png" alt="test"></img></a></li>
-            <li><button>Sign in</button></li>
-        </ul>
-    </nav>
-    <main>
-        <img src="img/logo.png">
-        <form>
-            <input type="text"></input>
-            <p>
-                <button>Google search</button>
-                <button> I'm Feeling Lucky</button>
-            </p>
-        </form>
-    </main>
-    <footer>
-        <div class="upper ftext">Hong Kong</div>
-        <div class="lower">
-            <div class="lower">
-                <a href="" class="lp ftext">About</a>
-                <a href="" class="lp ftext">Advertising</a>
-                <a href="" class="lp ftext">Business</a>
-                <a href="" class="lp ftext">How Search works</a>
+    <div class="root">
+        <nav>
+            <div class="bar">
+                <a href="https://mail.google.com" class="n_item">Gmail</a>
+                <a href="" class="n_item">Images</a>
+                <a href="https://www.google.com.hk" class="n_item"><img src="img/svg-path.png" alt="test"></a>
+                <button class="n_item">Sign in</button>
             </div>
-            <div class="lower">
-                <a href="" class="lp ftext">Privacy</a>
-                <a href="" class="lp ftext">Terms</a>
-                <a href="" class="lp ftext">Settings</a>
+        </nav>
+
+        <main>
+            <div class="m_upper">
+                <img src="img/logo.png">
+                <form>
+                    <input type="text" class="m_upper_item"></input>
+                </form>
+                <div class="search_buttons">
+                    <button class="m_upper_item s_button">Google search</button>
+                    <button class="m_upper_item s_button"> I'm Feeling Lucky</button>
+                </div>
             </div>
-        </div>
-    </footer>
+            <div class="m_lower">
+                <div class="translate">Google offered in :
+                    <a href="" class="lang">Chinese (Traditional) </a>
+                    <a href="" class="lang"> &nbsp;&nbsp;&nbsp;&nbsp;Chinese (Simplified)</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="upper ftext">Hong Kong</div>
+            <div class="lower">
+                <div class="lower">
+                    <a href="" class="lp ftext">About</a>
+                    <a href="" class="lp ftext">Advertising</a>
+                    <a href="" class="lp ftext">Business</a>
+                    <a href="" class="lp ftext">How Search works</a>
+                </div>
+                <div class="lower">
+                    <a href="" class="lp ftext">Privacy</a>
+                    <a href="" class="lp ftext">Terms</a>
+                    <a href="" class="lp ftext">Settings</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

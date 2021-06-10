@@ -1,103 +1,8 @@
-nav{
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-/* navigation bar */
-ul{
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-nav li{
-    float: left;
-    display: flex;
-    font-size: 12px;
-    color: #313131;
-    height: 10px;
-}
-
-.f{
-    padding: 10px;
-    margin: 2px;
-}
-
-nav img{
-    width:100%;
-    height:auto;
-}
-
-nav button{
-    width: 100px;
-    color: white;
-    background-color:rgb(52, 110, 235);
-    border: none;
-    border-radius: 5px;
-    height: 38px;
-    padding: 0;
+/* Apply to whole page */
+body{
+    background: #fff;
     margin: 0;
-}
-
-nav button:hover{
-    box-shadow: 0 0 3px 0 rgba(38, 144, 231, 0.815);
-    background-color: rgb(52, 122, 235);
-}
-/*end*/
-
-main{
-    position: relative;
-    margin: 200px 0px 200px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    text-align: center;
-    border: 3px solid #123;
-    min-height: 300px;
-}
-
-/*sub element of main*/
-main input{
-    width: 100%;
-    max-width: 500px;
-}
-
-main form{
-    padding: 20px;
-    padding-bottom: 0px;
-}
-
-footer{
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    background-color: #f2f2f2;
-    margin: 0px;
-    bottom: 0px; 
-}
-
-.ftext{
-    color: rgba(0, 0, 0, .54);
-    font-size: 15px;
-    margin: auto;   
-}
-
-.lower{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 10px;
-}
-
-.upper{
-    border-bottom: 1px solid #dadce0;
-    padding: 10px 20px;
-}
-
-.lp{
-    display: block;
-    padding: 15px;
-    white-space: nowrap;
+    padding: 0;
 }
 
 a, button{
@@ -106,14 +11,127 @@ a, button{
     color: black;
 }
 
-@media only screen and (max-width:1200px){.lower{justify-content:space-evenly}}
-
 a:hover{
     text-decoration: underline;
 }
+/* End Apply */
 
-body{
-    background: #fff;
-    margin: 0px;
-    padding: 0;
+/* page Layout */
+.root{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
 }
+
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 18px;
+}
+
+main{
+    margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: aqua;
+    text-align: center;
+}
+
+footer{
+    background-color: #f2f2f2;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+/* layout end */
+
+/* navigation bar */
+.n_item{
+    float: left;
+    display: block;
+    white-space: nowrap;
+    padding: 9px 10px;
+}
+
+nav button{
+    width: 90px;
+    color: white;
+    background-color:rgb(52, 110, 235);
+    border: none;
+    border-radius: 5px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+nav button:hover{
+    box-shadow: 0 0 3px 0 rgba(38, 144, 231, 0.815);
+    background-color: rgb(52, 122, 235);
+}
+
+nav img{
+    margin: 0 15px;
+}
+/* nav end */
+
+/* main body */
+.m_upper{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.search_buttons{
+    display: flex;
+    justify-content:space-between;
+}
+
+.s_button{
+    border: none;
+    background-color: #f8f9fa;
+    color: #5e6264;
+    padding: 10px;
+    width: 47%;
+}
+
+.m_upper_item{
+
+}
+
+.m_lower{
+    flex-basis: 50%;
+    background-color: yellow;
+}
+
+.lang{
+    font-size: 12px;
+}
+/* main end */
+
+/* footer */
+.upper{
+    border-bottom: 1px solid #dadce0;
+}
+
+.lower{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ftext{
+    color: rgba(0, 0, 0, .54);
+    font-size: 15px; 
+    padding: 15px; 
+}
+
+@media only screen and (max-width:1200px){.lower{justify-content:space-evenly}}
+
+/* footer end*/
