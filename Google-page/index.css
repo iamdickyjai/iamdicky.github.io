@@ -97,7 +97,7 @@ nav img{
 }
 
 .search_icon{
-    background-image: url(/img/search.png);
+    background-image: url(img/search.png);
     background-position: 5px 10px;
     background-repeat: no-repeat;
     padding-left: 30px;
@@ -116,7 +116,7 @@ nav img{
 
 .search_clear{
     display:none;
-    background-image: url(/img/clear.png);
+    background-image: url(img/clear.png);
     background-position: 0px 10px;
     background-repeat: no-repeat;
     padding-right: 30px;
@@ -143,6 +143,7 @@ nav img{
     width: 65%;
     text-align: center;
     min-width: 400px;
+    max-width: 700px;
 }
 
 .lang{
