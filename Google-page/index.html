@@ -6,6 +6,29 @@
 </head>
 
 <body>
+    <script>
+        function getContent() {
+            var content = document.getElementById("#sf").value;
+            if (content != "") {
+                var arr = document.getElementsByClassName("search_clear");
+                for (var ele of arr) {
+                    ele.style.display = "initial";
+                }
+            }
+            else {
+                var arr = document.getElementsByClassName("search_clear");
+                for (var ele of arr) {
+                    ele.style.display = "none";
+                }
+            }
+        }
+
+        function clearText() {
+            document.getElementById("#sf").value = "";
+            getContent();
+        }
+    </script>
+
     <div class="root">
         <nav>
             <div class="bar">
@@ -17,20 +40,24 @@
         </nav>
 
         <main>
-            <div class="m_upper">
-                <img src="img/logo.png">
+            <div class="center">
+                <img src="img/logo.png" class="logo">
                 <form>
-                    <input type="text" class="m_upper_item"></input>
+                    <div class="search_container">
+                        <i class="search_icon"></i>
+                        <input type="text" id="#sf" class="search_field" oninput="getContent();" title="Search"></input>
+                        <i class="search_clear" title="Clear" onclick="clearText();"></i>
+                    </div>
                 </form>
                 <div class="search_buttons">
-                    <button class="m_upper_item s_button">Google search</button>
-                    <button class="m_upper_item s_button"> I'm Feeling Lucky</button>
+                    <button class="s_button">Google search</button>
+                    <button class="s_button"> I'm Feeling Lucky</button>
                 </div>
-            </div>
-            <div class="m_lower">
-                <div class="translate">Google offered in :
+                <div class="translate">
+                    <span style="font-size: 12px;">Google offered in :</span>
                     <a href="" class="lang">Chinese (Traditional) </a>
-                    <a href="" class="lang"> &nbsp;&nbsp;&nbsp;&nbsp;Chinese (Simplified)</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="lang">Chinese (Simplified)</a>
                 </div>
             </div>
         </main>
