@@ -6,30 +6,6 @@
 </head>
 
 <body>
-    <script>
-        function getContent() {
-            var content = document.getElementById("#sf").value;
-            if (content != "") {
-                var arr = document.getElementsByClassName("search_clear");
-                for (var ele of arr) {
-                    ele.style.display = "initial";
-                }
-            }
-            else {
-                var arr = document.getElementsByClassName("search_clear");
-                for (var ele of arr) {
-                    ele.style.display = "none";
-                }
-            }
-        }
-
-        function clearText() {
-            document.getElementById("#sf").value = "";
-            getContent();
-
-        }
-    </script>
-
     <div class="root">
         <nav>
             <div class="bar">
@@ -51,7 +27,7 @@
                     </div>
                 </form>
                 <div class="search_buttons">
-                    <button class="s_button">Google search</button>
+                    <button class="s_button" onclick="getResult();">Google search</button>
                     <button class="s_button"> I'm Feeling Lucky</button>
                 </div>
                 <div class="translate">
@@ -80,6 +56,7 @@
             </div>
         </footer>
     </div>
+    <script src="form.js"></script>
 </body>
 
 </html>
