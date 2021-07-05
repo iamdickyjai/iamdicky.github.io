@@ -2,10 +2,14 @@
 
 <head>
     <title>Rock Paper Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="big-text">
     <div class="flex-wrapper">
         <div id="intro">
             <div class="block">
@@ -14,22 +18,24 @@
                     Scissors against computer. Whoever get 5 rounds
                     first will win.
                 </p>
-                <button onclick="showBlock(1);">Start!</button>
+                <button onclick="showBlock(1);" class="generic-btn big-text">Start!</button>
             </div>
         </div>
-        
+
         <div id="main">
             <div class="block">
                 <h1>Choose you path!</h1>
-                <button onclick="setUserChoice(1);">Rock!</button>
-                <button onclick="setUserChoice(2);">Paper!</button>
-                <button onclick="setUserChoice(3);">Scissor!</button>
+                <section class="choice-block">
+                    <button onclick="setUserChoice(1);" class="img-btn"><img src="img/rock.png"></button>
+                    <button onclick="setUserChoice(2);" class="img-btn"><img src="img/paper.png"></button>
+                    <button onclick="setUserChoice(3);" class="img-btn"><img src="img/scissor.png"></button>
+                </section>
             </div>
-        
+
             <div class="block">
                 <h1>Computer Choice</h1>
-                <div id="computerChoice"></div>
-                <div id ='result'>Here is pc choice</div>
+                <img id="computerChoice" src=""></img>
+                <div id='result'></div>
                 <div>Player has won <span id="currentResult">0</span> round</div>
             </div>
         </div>
@@ -38,7 +44,7 @@
             <div class="block">
                 <h1>Final Result</h1>
                 <div id="finalResult"></div>
-                <button onclick="showBlock(0);resetData();">Start a new one</button>
+                <button onclick="showBlock(0);resetData();" class="generic-btn big-text">Start a new one</button>
             </div>
         </div>
         <script src="app.js"></script>

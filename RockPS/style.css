@@ -1,3 +1,9 @@
+.big-text{
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(114, 51, 0);
+}
+
 body{
     background-color: rgb(251, 244, 201);
 }
@@ -9,11 +15,65 @@ body{
 }
 
 .block{
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #main, #end{
-    display:none;
+    display: none;
+}
+
+#intro, #main, #end{
+    animation-duration: 2s;
+    animation-name: fade-in;
+    width: 100%;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.generic-btn{
+    padding: 10px 30px;
+    color: white;
+    background-color: rgb(255, 94, 0);
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.5s;
+    margin: 10px;
+    box-shadow: 0 5px 3px rgb(97, 74, 48);
+}
+
+.generic-btn:hover{
+    transform: scale(1.05) translateY(-5px);
+}
+
+.generic-btn:focus{
+    transform: scale(1.1);
+}
+.choice-block{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.img-btn{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin:0 20px;
+    transition: scale 1s;
+}
+
+.img-btn:hover{
+    transform: scale(1.05);
+}
+
+h1{
+    text-align: center;
 }
