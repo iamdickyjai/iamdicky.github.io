@@ -6,26 +6,43 @@
 </head>
 
 <body>
-    <div>
-        <h1>Intoduction</h1>
-        <p>This is a website let you to play Rock Paper and
-            Scissors against computer. Whoever get 5 rounds
-            first will win.
-        </p>
-    </div>
+    <div class="flex-wrapper">
+        <div id="intro">
+            <div class="block">
+                <h1>Intoduction</h1>
+                <p>This is a website let you to play Rock Paper and
+                    Scissors against computer. Whoever get 5 rounds
+                    first will win.
+                </p>
+                <button onclick="showBlock(1);">Start!</button>
+            </div>
+        </div>
+        
+        <div id="main">
+            <div class="block">
+                <h1>Choose you path!</h1>
+                <button onclick="setUserChoice(1);">Rock!</button>
+                <button onclick="setUserChoice(2);">Paper!</button>
+                <button onclick="setUserChoice(3);">Scissor!</button>
+            </div>
+        
+            <div class="block">
+                <h1>Computer Choice</h1>
+                <div id="computerChoice"></div>
+                <div id ='result'>Here is pc choice</div>
+                <div>Player has won <span id="currentResult"></span> round</div>
+            </div>
+        </div>
 
-    <div>
-        <h1>Choose you path!</h1>
-        <button onclick="setUserChoice(0);">Rock!</button>
-        <button onclick="setUserChoice(1);">Paper!</button>
-        <button onclick="setUserChoice(2);">Scissor!</button>
+        <div id="end">
+            <div class="block">
+                <h1>Final Result</h1>
+                <div id="finalResult"></div>
+                <button onclick="showBlock(0);resetData();">Start a new one</button>
+            </div>
+        </div>
+        <script src="app.js"></script>
     </div>
-
-    <div>
-        <h1>Computer Choice</h1>
-        <div>Here is pc choice</div>
-    </div>
-    <script src="app.js"></script>
 </body>
 
 </html>
